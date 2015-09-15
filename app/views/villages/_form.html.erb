@@ -1,0 +1,57 @@
+<%= form_for(@village) do |f| %>
+  <% if @village.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@village.errors.count, "error") %> prohibited this village from being saved:</h2>
+
+      <ul>
+      <% @village.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :info_text %><br>
+    <%= f.text_area :info_text %>
+  </div>
+  <div class="field">
+    <%= f.label :latitude %><br>
+    <%= f.text_field :latitude %>
+  </div>
+  <div class="field">
+    <%= f.label :longitude %><br>
+    <%= f.text_field :longitude %>
+  </div>
+  <div class="field">
+    <%= f.label :photo1 %><br>
+    <%= f.text_field :photo1 %>
+  </div>
+  <div class="field">
+    <%= f.label :photo2 %><br>
+    <%= f.text_field :photo2 %>
+  </div>
+  <div class="field">
+    <%= f.label :photo3 %><br>
+    <%= f.text_field :photo3 %>
+  </div>
+  <div class="field">
+    <%= f.label :photo4 %><br>
+    <%= f.text_field :photo4 %>
+  </div>
+  <div class="field">
+    <%= f.label :phone_municipality %><br>
+    <%= f.text_field :phone_municipality %>
+  </div>
+  <div class="field">
+    <%= f.label :phone_info_tourism %><br>
+    <%= f.text_field :phone_info_tourism %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

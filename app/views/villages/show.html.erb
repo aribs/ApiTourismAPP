@@ -1,0 +1,54 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @village.name %>
+</p>
+
+<p>
+  <strong>Info text:</strong>
+  <%= @village.info_text %>
+</p>
+
+<p>
+  <strong>Latitude:</strong>
+  <%= @village.latitude %>
+</p>
+
+<p>
+  <strong>Longitude:</strong>
+  <%= @village.longitude %>
+</p>
+
+<p>
+  <strong>Photo1:</strong>
+  <%= @village.photo1 %>
+</p>
+
+<p>
+  <strong>Photo2:</strong>
+  <%= @village.photo2 %>
+</p>
+
+<p>
+  <strong>Photo3:</strong>
+  <%= @village.photo3 %>
+</p>
+
+<p>
+  <strong>Photo4:</strong>
+  <%= @village.photo4 %>
+</p>
+
+<p>
+  <strong>Phone municipality:</strong>
+  <%= @village.phone_municipality %>
+</p>
+
+<p>
+  <strong>Phone info tourism:</strong>
+  <%= @village.phone_info_tourism %>
+</p>
+
+<%= link_to 'Edit', edit_village_path(@village) %> |
+<%= link_to 'Back', villages_path %>

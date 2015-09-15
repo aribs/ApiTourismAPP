@@ -1,0 +1,45 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Villages</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Info text</th>
+      <th>Latitude</th>
+      <th>Longitude</th>
+      <th>Photo1</th>
+      <th>Photo2</th>
+      <th>Photo3</th>
+      <th>Photo4</th>
+      <th>Phone municipality</th>
+      <th>Phone info tourism</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @villages.each do |village| %>
+      <tr>
+        <td><%= village.name %></td>
+        <td><%= village.info_text %></td>
+        <td><%= village.latitude %></td>
+        <td><%= village.longitude %></td>
+        <td><%= village.photo1 %></td>
+        <td><%= village.photo2 %></td>
+        <td><%= village.photo3 %></td>
+        <td><%= village.photo4 %></td>
+        <td><%= village.phone_municipality %></td>
+        <td><%= village.phone_info_tourism %></td>
+        <td><%= link_to 'Show', village %></td>
+        <td><%= link_to 'Edit', edit_village_path(village) %></td>
+        <td><%= link_to 'Destroy', village, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Village', new_village_path %>
